@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Page de vendeur</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 20px; /* Ajustez cette valeur pour définir l'espacement entre les icônes */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Ajustez la marge à gauche pour déplacer les icônes vers la droite */
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+
+        
+        a {
+            text-decoration: none; /* Supprime le soulignement par défaut des liens */
+        }
+        
+        
+        ul.menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px; /* Espacement de 20px autour du conteneur */
+        }
+
+        ul.menu li {
+            margin-right: 80px;
+            width: 90px;
+            border: 1px solid #ccc;
+            border-radius: 45%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* Ajoutez le style suivant pour surligner en jaune */
+        a.highlight {
+        background-color: yellow;
+        }
+        .text{
+            margin-left: 80px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            /* Ajustez l'espacement pour les écrans de taille moyenne */
+            ul.menu li {
+                margin-right: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            li {
+                margin-right: 0.2rem; /* Réduisez l'espacement pour les petits téléphones en mode portrait */
+            }
+        }
+
+        @media only screen and (min-width: 321px) and (max-width: 480px) {
+            li {
+                margin-right: 0.5rem; /* Réduisez l'espacement pour les petits téléphones en orientation paysage */
+            }
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 600px) {
+            li {
+                margin-right: 1rem; /* Ajustez l'espacement pour les tablettes en portrait, iPad, etc. */
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 800px) {
+            li {
+                margin-right: 1.5rem; /* Ajustez l'espacement pour les tablettes en orientation paysage, laptops de basse résolution */
+            }
+        }
+
+        /* Ajustez l'espacement pour les écrans de bureau */
+        @media only screen and (min-width: 801px) {
+            li {
+                margin-right: 2rem; /* Ajustez l'espacement pour les grandes tablettes en orientation paysage, laptops et desktops courants */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >
+                <h1>Logo</h1></a>
+            </li>
+            <li><a href="/connexion">
+                <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="/panier">
+                <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="#">
+                <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="text">
+              <!-- Utilisez la classe "highlight" pour surligner en jaune -->
+            <h2>Mon <a href="" class="highlight">compte</a> </h2>
+            <h2>Coordonnées et informations personnelles</h2>
+            <p>informations personnelles</p> 
+            <p></p>Connexion et sécurité</p>
+            <h2>Informations de paiement</h2>
+            <p>Paiement</p>
+            <h2>Préférences de <a href="" class="highlight">compte</a> </h2>
+            <p>Préférences en matière de publicité</p>
+            <p>Fermer le <a href="" class="highlight">compte</a></p>
+
+        </div>
+    </div>
+</body>
+</html>

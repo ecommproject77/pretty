@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Page de vendeur</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        header ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .icon{
+            margin-right: 20px; 
+
+        }
+        /* li {
+            margin-right: 20px; 
+        } */
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Ajustez la marge à gauche pour déplacer les icônes vers la droite */
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        
+        
+        /* Ajoutez le style suivant pour surligner en jaune */
+        a.highlight {
+        background-color: yellow;
+        }
+        .text{
+            margin-left: 80px;
+        }
+        .footer{
+            background-color: black;
+            margin-top: 100px;
+        }
+        .foot{
+            margin-left: 80px;
+        }
+        .header{
+            display: flex;
+        }
+        a{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        .menu ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+     display: flex;
+    /*flex-direction: row;  */
+    }
+    .menu li {
+    margin-left: 150px; /* Ajoutez de l'espacement horizontal entre les éléments de la liste */
+}
+hr{
+    margin-top: -20px;
+
+}
+
+#tout {
+		margin-left: 125px;
+		font-family: var(---ft);
+		font-size: 12px;
+		color: black;
+		text-decoration: none;
+}
+#actu {
+	font-family: var(---ft);
+	font-size: 12px;
+	margin-left: 20px;
+	color: black;
+	text-decoration: none;		
+}
+#commande-link {
+	font-family: var(---ft);
+	font-size: 12px;
+	margin-left: 20px;
+	color: black;
+	text-decoration: none;	
+}
+#videos {
+	font-family: var(---ft);
+	font-size: 12px;
+	margin-left: 20px;
+	color: black;
+	text-decoration: none;			
+}
+#cartes {
+	font-family: var(---ft);
+	font-size: 12px;
+	margin-left: 20px;
+	color: black;
+	text-decoration: none;		
+}
+#imag {
+        font-family: var(---ft);
+        font-size: 12px;
+		color: black;
+		margin-left: 20px;	
+        text-decoration: none;		
+
+}
+.Trait{
+	width: 100%;
+	border-bottom: 1px solid rgb(233, 233, 233);
+	margin-top: 4px;
+}
+nav .animation {
+    margin-bottom: -10px;
+     position: absolute;
+    height: 4px;
+    z-index: 0;
+    background: skyblue;
+    transition: all .5s ease 0;
+}
+
+nav a {
+    position: relative;
+    font-size: 15px;
+    line-height: 30px;
+    text-decoration: none;
+    z-index: 1;
+    cursor: pointer; 
+}
+
+a {
+    width: 100px; 
+}
+
+a:nth-child(1):hover~.animation {
+    width: 50px;
+    left: 125px;
+}
+
+ a:nth-child(2):hover~.animation {
+    width: 50px;
+    left: 195px;
+}
+
+a:nth-child(3):hover~.animation {
+    width: 50px;
+    left: 270px;
+}
+
+ a:nth-child(4):hover~.animation {
+    width: 90px;
+    left: 340px;
+}
+
+/* a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 370px;
+} */
+#videos:hover~.animation {
+    width: 90px;
+    left: 445px;
+}
+#cartes:hover~.animation {
+    width: 120px;
+    left: 550px;
+}
+/* a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 370px;
+} */
+/* #commande-link {
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.commande-dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} */
+
+/* .commande-dropdown li {
+    padding: 10px;
+} */
+
+/* .commande-dropdown a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+} */
+
+/* .commande-dropdown a:hover {
+    background-color: #eee;
+} */
+
+/*.animation.start-home {
+    width: 50px;
+    left: 0;
+}
+nav .animation.start-home {
+        width: 50px;
+        left: 0;
+    } */
+
+    /* a#tout:hover~.animation {
+        width: 50px;
+        left: 0;
+    }
+
+    a#actu:hover~.animation {
+        width: 100px;
+        left: 100px;
+    } */
+
+
+        /* .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        } */
+        /* Ajoutez le style pour masquer initialement le menu déroulant */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    left: 320px;
+    width: 200px;
+}
+
+.commande-dropdown {
+    list-style-type: none;
+    /* padding: 0;
+    margin: 0; */
+    /* margin-left: 200px; */
+}
+
+.commande-dropdown li {
+    padding: 5px;
+    margin-left: -80px;
+}
+
+.commande-dropdown a {
+    text-decoration: none;
+    color: #333;
+    display: line;
+}
+
+.commande-dropdown a:hover {
+    background-color: #eee;
+    /* width: 400px; */
+}
+
+
+       /* Ajoutez ces styles responsifs pour afficher les menus de façon verticale */
+       @media only screen and (max-width: 600px) {
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin-right: 0; /* Désactivez l'espacement horizontal */
+                margin-bottom: 0px; /* Ajoutez de l'espacement vertical entre les éléments de la liste */
+            }
+        }
+
+        /* Ajustez l'espacement pour les écrans de bureau */
+        .menu li {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="icon">
+                <a href="#">
+                    <h1>Logo</h1>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="/connexion">
+                    <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="/panier">
+                    <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="#">
+                    <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="header">
+        <h3 style="margin-left: 30px;">Hub vendeur</h3>
+        <a href="">Nom du profil</a>
+    </div>
+
+    <div style="display: flex;align-items: center;">
+        <nav>
+            <a id="tout" href="/apercu">APERCU</a>
+            <a id="imag" href="/tache">TACHES</a>
+            <a id="actu" href="#">VENTES</a>
+            <a id="commande-link" href="#">COMMANDES</a>
+            <div class="dropdown">
+                <ul class="commande-dropdown">
+                    <li><a href="/commande">Toutes les commandes</a></li>
+                    <li><a href="#">Paiement en attente</a></li>
+                    <li><a href="#">Payées et envoyées</a></li>
+                    <li><a href="#">Annulations</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Demandes de litiges</a></li>
+                </ul>
+            </div>
+            <a id="videos" href="#">RACCOURCIS</a>
+            <a id="cartes" href="#">OUTILS DE VENTES</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </div>
+    
+    <div class="Trait"></div>
+    
+
+    <!-- ... Votre code HTML précédent ... -->
+
+    <script>
+        
+//         document.addEventListener("DOMContentLoaded", function () {
+//     var commandeLink = document.getElementById("commande-link");
+//     var dropdown = document.querySelector(".dropdown");
+
+//     commandeLink.addEventListener("mouseover", function () {
+//         dropdown.style.display = "block";
+//     });
+
+//     commandeLink.addEventListener("mouseout", function () {
+//         dropdown.style.display = "none";
+//     });
+// });
+// document.addEventListener("DOMContentLoaded", function () {
+//     var commandeLink = document.getElementById("commande-link");
+//     var dropdown = document.querySelector(".dropdown");
+
+//     // Utilisez mouseover sur le lien "COMMANDES" pour afficher le menu déroulant
+//     commandeLink.addEventListener("mouseover", function () {
+//         dropdown.style.display = "block";
+//     });
+
+//     // Utilisez mouseleave sur le menu déroulant pour le cacher
+//     dropdown.addEventListener("mouseleave", function () {
+//         // Ajoutez une pause avant de cacher le menu déroulant (par exemple, 300 ms)
+//         setTimeout(function () {
+//             dropdown.style.display = "none";
+//         }, 100);
+//     });
+// });
+document.addEventListener("DOMContentLoaded", function () {
+    var commandeLink = document.getElementById("commande-link");
+    var dropdown = document.querySelector(".dropdown");
+
+    // Utilisez mouseover sur le lien "COMMANDES" pour afficher le menu déroulant
+    commandeLink.addEventListener("mouseover", function () {
+        dropdown.style.display = "block";
+    });
+
+    // Utilisez mouseleave sur le lien "COMMANDES" pour cacher le menu déroulant
+    commandeLink.addEventListener("mouseleave", function () {
+        // Ajoutez une pause avant de cacher le menu déroulant (par exemple, 300 ms)
+        setTimeout(function () {
+            dropdown.style.display = "none";
+        }, 1000);
+    });
+
+    // Utilisez mouseleave sur le menu déroulant pour le cacher
+    dropdown.addEventListener("mouseleave", function () {
+        // Ajoutez une pause avant de cacher le menu déroulant (par exemple, 300 ms)
+        setTimeout(function () {
+            dropdown.style.display = "none";
+        }, 300);
+    });
+});
+
+
+
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "pretty_app",
+  "version": "1.0.0",
+  "description": "Market place site d achat et vente en ligne",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Annick et Ajha",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

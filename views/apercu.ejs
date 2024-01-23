@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Page de vendeur</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        header ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .icon{
+            margin-right: 20px; 
+
+        }
+        /* li {
+            margin-right: 20px; 
+        } */
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Ajustez la marge à gauche pour déplacer les icônes vers la droite */
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        
+        
+        /* Ajoutez le style suivant pour surligner en jaune */
+        a.highlight {
+        background-color: yellow;
+        }
+        .text{
+            margin-left: 80px;
+        }
+        .footer{
+            background-color: black;
+            margin-top: 100px;
+        }
+        .foot{
+            margin-left: 80px;
+        }
+        .header{
+            display: flex;
+        }
+        .card-tache,
+        .card-annonces{
+            flex: 1; /* Faites en sorte que les deux cartes occupent une part égale de l'espace disponible */
+        margin: 10px; /* Ajoutez une marge entre les cartes pour l'esthétique */
+        padding: 20px; /* Ajoutez un remplissage pour plus d'espace à l'intérieur des cartes */
+        border: 1px solid #ddd; /* Ajoutez une bordure pour délimiter les cartes */
+        border-radius: 10px;
+        box-sizing: border-box; /* Incluez la bordure dans la largeur/hauteur totale de la carte */
+        }
+        
+        .row{
+            display: flex; /* Utilisez flexbox pour aligner les éléments horizontalement */
+        }
+
+        h2{
+            text-decoration: underline;
+        }
+       /* Ajoutez ces styles responsifs pour afficher les menus de façon verticale */
+       @media only screen and (max-width: 600px) {
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin-right: 0; /* Désactivez l'espacement horizontal */
+                margin-bottom: 0px; /* Ajoutez de l'espacement vertical entre les éléments de la liste */
+            }
+        }
+
+        /* Ajustez l'espacement pour les écrans de bureau */
+        .menu li {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="icon">
+                <a href="#">
+                    <h1>Logo</h1>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="/connexion">
+                    <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="/panier">
+                    <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+            <li class="icon">
+                <a href="#">
+                    <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+                </a>
+            </li>
+        </ul>
+    </header>
+<body>
+    <h2>Aperçu</h2>
+    <div class="container">
+        <div class="row">
+            <div class="card-tache">
+                <h2>Tâches</h2>
+                <p>Aucune tâches en attente</p>
+            </div>
+            <div class="card-annonces">
+                <h2>Annonces</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-tache">
+                <h2>Commandes</h2>
+                <!-- <p>Aucune tâches en attente</p> -->
+            </div>
+            <div class="card-annonces">
+                <h2>Ventes</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-tache">
+                <h2>Offres promotionnelles</h2>
+                <!-- <p>Aucune tâches en attente</p> -->
+            </div>
+            <div class="card-annonces">
+                <h2>Trafic</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 20px; /* Ajustez cette valeur pour définir l'espacement entre les icônes */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Ajustez la marge à gauche pour déplacer les icônes vers la droite */
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            width: 95%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            /* border: none; */
+            border: 1px solid #000;
+            width: 95%;
+            border-radius: 3px;
+
+        }
+        .search-icon {
+            margin-left: auto;
+            margin-right: 0px; /* Ajustez cette valeur pour définir l'espacement entre la barre de recherche et l'icône */
+            /* color: blue; */
+        }
+        a {
+            text-decoration: none; /* Supprime le soulignement par défaut des liens */
+        }
+        
+        
+        ul.menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px; /* Espacement de 20px autour du conteneur */
+        }
+
+        ul.menu li {
+            margin-right: 80px;
+            width: 90px;
+            border: 1px solid #ccc;
+            border-radius: 45%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+        @media only screen and (max-width: 800px) {
+            /* Ajustez l'espacement pour les écrans de taille moyenne */
+            ul.menu li {
+                margin-right: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            li {
+                margin-right: 0.2rem; /* Réduisez l'espacement pour les petits téléphones en mode portrait */
+            }
+        }
+
+        @media only screen and (min-width: 321px) and (max-width: 480px) {
+            li {
+                margin-right: 0.5rem; /* Réduisez l'espacement pour les petits téléphones en orientation paysage */
+            }
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 600px) {
+            li {
+                margin-right: 1rem; /* Ajustez l'espacement pour les tablettes en portrait, iPad, etc. */
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 800px) {
+            li {
+                margin-right: 1.5rem; /* Ajustez l'espacement pour les tablettes en orientation paysage, laptops de basse résolution */
+            }
+        }
+
+        /* Ajustez l'espacement pour les écrans de bureau */
+        @media only screen and (min-width: 801px) {
+            li {
+                margin-right: 2rem; /* Ajustez l'espacement pour les grandes tablettes en orientation paysage, laptops et desktops courants */
+            }
+        }
+    </style>
+    
+    <title>Accueil</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >
+                <h1>Logo</h1></a>
+            </li>
+            <li><a href="/connexion">
+                <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="/panier">
+                <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="#">
+                <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+        </ul>
+    </header>
+    <menu>
+        <form action="/rechercher" method="get">
+            <!-- <input type="text" name="q" id="barreRecherche" placeholder="Rechercher..." onmousedown="supprimerBordure()"> -->
+            <input type="text" name="q" id="barreRecherche" placeholder="Rechercher..." >
+            <!-- <input type="submit" value="Rechercher"> -->
+            <iconify-icon icon="fluent:sidebar-search-rtl-20-regular" style="color: white; background-color: blue;" width="30" height="30"></iconify-icon>
+        </form>
+        
+</body>
+</html>

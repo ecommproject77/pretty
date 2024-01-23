@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>modifier vôtre profil</title>
+    <style>
+        /* Votre style ici... */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+            ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        /* align-items: center;  */
+        }
+
+        li {
+            margin-right: 20px; /* Ajustez cette valeur pour définir l'espacement entre les icônes */
+        }
+
+        h1 {
+            margin: 0;
+        }
+        
+        hr{
+            width: 97%;
+        }
+        
+        .card{
+            background-color: #ccc;
+            height: 300px;
+        }
+        .icon{
+            padding: 20px;
+            display: flex;
+        }
+        .info{
+            height: 300px;
+            display: flex;
+        }
+        .information{
+            margin: 20px;
+        }
+        .alignement{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer{
+            background-color: black;
+            margin-top: 100px;
+        }
+
+        .text {
+            display: none;
+        }
+
+        .info a {
+            cursor: pointer;
+            color: blue;
+        }
+
+
+
+/* Ajoutez ces styles pour rendre la page responsive */
+@media only screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .icon {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon h3 {
+        margin-top: 10px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .bouton {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    ul {
+        justify-content: flex-end;
+    }
+
+    li {
+        margin-bottom: 0;
+    }
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup a {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.popup span.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black; /* ou une autre couleur de votre choix */
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >
+                <h1>Logo</h1></a>
+            </li>
+                <li style="margin-left: 900px;"><a href="/connexion">
+                    <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30" ></iconify-icon>
+                </a></li>
+                <li><a href="/panier">
+                    <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+                </a></li>
+                <li><a href="#"id="hamburger-icon">
+                    <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+                </a></li>
+            </ul>
+        </header>
+        <div class="card">
+            <div class="icon">
+                <iconify-icon icon="mingcute:user-4-fill" style="color: gray;" width="130" height="130"></iconify-icon>
+                <h3>Ahjagrcebr-0 <br>
+                    Pour modifier vôtre, consultez <br>
+                    <a href="">Paramètres du compte</a></h3>
+               
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div style="margin: 12px;">
+            <h2>Qui sommes-nous?</h2>
+            <p>Utilisez cet espace pour vous présenter aux autres membres de logo et parler de vos passions. Sucitez la curiosité des autres membres pour qu'ils deviennent vos abonnés.</p>
+            <form action="" method="post">
+                <textarea name="com" id="com" cols="160" rows="20"></textarea>
+                <div class="bouton">
+                    <center>
+                    <input type="button" value="Enregistrer" style="width: 300px; height: 40px; margin: 50px;  text-align: center; line-height: 40px; border-radius: 50px;border: 1px solid blue; background-color: blue;color: white;">
+                    <a href="/modifierprof">
+                        <input type="button" value="Annuler" style="width: 300px; height: 40px; text-align: center; line-height: 40px; border-radius: 50px;border: 1px solid blue; background-color: transparent;color: blue;">
+                    </a>
+                </center>
+                </div>
+
+            </form>
+        </div>
+        
+        <div id="popup" class="popup">
+            <span class="close-btn" id="close-popup">X</span>
+            <a href="#">Catégories</a>
+            <a href="#">Bon plans</a>
+            <a href="#">Vendre</a>
+            <a href="#">Aide</a>
+        </div>
+        
+        
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerIcon = document.querySelector('#hamburger-icon');
+    const popup = document.querySelector('#popup');
+    const closeBtn = document.querySelector('#close-popup');
+
+    hamburgerIcon.addEventListener('click', function() {
+        popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+});
+
+
+</script>
+
+</body>
+</html>

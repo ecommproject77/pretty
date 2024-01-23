@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Détail images</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px; /* Ajout d'une marge générale */
+            justify-content: space-around;
+        }
+
+        .gallery {
+            border: 1px solid #000;
+            width: 50%;
+            max-width: 350px;
+            height: 300px; /* Vous pouvez ajuster la hauteur selon vos préférences */
+            margin-bottom: 10px;
+        }
+
+        div.gallery img {
+            width: 75%;
+            height: 75%;
+            margin: 35px;
+            /* align-items: center; */
+            /* object-fit: cover; Ajuste l'image pour couvrir toute la zone */
+        }
+
+        .text {
+            text-align: center;
+            margin-top: 10px; /* Ajout d'une marge en haut du texte */
+            /* margin-left: 50px; */
+            /* justify-content: space-between; */
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 20px; /* Ajustez cette valeur pour définir l'espacement entre les icônes */
+        }
+        .search-icon {
+            margin-left: auto;
+            margin-right: 0px; /* Ajustez cette valeur pour définir l'espacement entre la barre de recherche et l'icône */
+            /* color: blue; */
+        }
+        .formulaire {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            width: 95%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            /* border: none; */
+            border: 1px solid #000;
+            width: 95%;
+            border-radius: 3px;
+
+        }
+        
+        a {
+            text-decoration: none; /* Supprime le soulignement par défaut des liens */
+        }
+        
+        
+        ul.menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px; /* Espacement de 20px autour du conteneur */
+        }
+
+        ul.menu li {
+            margin-right: 80px;
+            width: 90px;
+            border: 1px solid #ccc;
+            border-radius: 45%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Ajustez la marge à gauche pour déplacer les icônes vers la droite */
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        div.gallery-card img {
+        width: 100%;
+        height: auto;
+        /* border-radius: 50%; */
+        }
+
+        div.gallery-card {
+        margin: 20px;    
+        border: 1px solid #ccc;
+        /* border-radius: 50%; */
+        float: left;
+        width: 350px;
+        background-color: #ffffff;
+    }
+    
+        div.desc {
+        padding: 15px;
+        text-align: center;
+        color: #fff;
+        }
+        div.desce {
+        padding: 15px;
+        text-align: center;
+        color: #000;
+        }
+        .bottom-texte {
+        clear: both; /* Assurez-vous que la div est effacée en dessous des autres éléments flottants */
+        margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+        margin: 20px;
+        }
+
+        
+
+        /* Médias queries pour ajuster le style en fonction de la largeur de l'écran */
+        @media screen and (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                align-items: flex-start; /* Aligne les éléments en haut sur les grands écrans */
+            }
+
+            .gallery {
+                margin-right: 20px;
+            }
+
+            .text {
+                margin-top: 0; /* Réduit la marge en haut du texte sur les grands écrans */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >
+                <h1>Logo</h1></a>
+            </li>
+            <li><a href="/connexion">
+                <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="/panier">
+                <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="#">
+                <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+        </ul>
+    </header>
+    <menu>
+        <form action="/rechercher" method="get" class="formulaire">
+            <!-- <input type="text" name="q" id="barreRecherche" placeholder="Rechercher..." onmousedown="supprimerBordure()"> -->
+            <input type="text" name="q" id="barreRecherche" placeholder="Rechercher..." >
+            <!-- <input type="submit" value="Rechercher"> -->
+            <iconify-icon icon="fluent:sidebar-search-rtl-20-regular" style="color: white; background-color: blue;" width="30" height="30"></iconify-icon>
+        </form>
+    </section>
+    <form action="">
+    <div class="container">
+        <div class="gallery">
+            <img src="/images/<%= imageName %>" alt="Cinque Terre">
+        </div>
+        <div class="text">
+            <h2>Titre</h2>
+            <h3>Description</h3>
+            <h4>Prix</h4>
+            
+                <label for="taille">Taille</label>
+                <select class="form-select" id="taille" style="width: 300px; height: 30px;">
+                    <option selected disabled>Taille</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select><br><br>
+
+                  <label for="couleur">Couleur</label>
+                  <select class="form-select" id="couleur" style="width: 300px; height: 30px;">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                  </select><br><br>
+
+                  <label for="qte">Quantité</label>
+                  <select class="form-select" id="qte" style="width: 300px; height: 30px;">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                  </select><br><br>
+                  <input type="button" value="Achat immédiat" style="width: 300px; height: 40px; background-color: blue; color: #fff; border-radius: 20px;margin-left: 60px;"><br><br>
+                  <input type="button" value="Ajouter au panier" style="width: 300px; height: 40px; background-color: transparent; color: blue;  border-radius: 20px; margin-left: 60px;">
+
+                
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <select class="form-select" >
+            <option selected disabled>Taille</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <select class="form-select" >
+            <option selected disabled>Couleur</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <select class="form-select" >
+            <option selected disabled>Thème</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <select class="form-select" >
+            <option selected disabled>Personnage</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <select class="form-select" >
+            <option selected disabled>Prix</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+    </section>
+    <section>
+        <h3 style="margin: 40px;">Voir d'autres article de même Catégorie</h3>
+        <!-- <div class="container">
+            <h3 style="margin: 20px;">Mode</h3>
+        </div> -->
+        <div class="gallery-card">
+            <a target="_blank" href="/images/<%= imageName %>">
+                <img src="/images/<%= imageName %>" alt="Mountains" width="600" height="400">
+            </a>
+            <!-- <div class="desc">Add a description of the image here</div> -->
+          </div>
+          
+          <div class="gallery-card">
+            <a target="_blank" href="/images/<%= imageName %>">
+                <img src="/images/<%= imageName %>" alt="Mountains" width="600" height="400">
+            </a>
+            <!-- <div class="desc">Add a description of the image here</div> -->
+          </div>
+          
+          <div class="gallery-card">
+            <a target="_blank" href="/images/<%= imageName %>">
+                <img src="/images/<%= imageName %>" alt="Mountains" width="600" height="400">
+            </a>
+            <!-- <div class="desce">Add a description of the image here</div> -->
+          </div>
+          <div class="bottom-texte">
+            <!--  -->
+        </div>
+    
+    </section>
+</body>
+
+</html>

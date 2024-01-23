@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'article</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            height: 50px;
+            /* border-radius: 10px; */
+            /* background-color: #EBEDFF; */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Editer un article</h2> 
+        <form style="width: 50%;">
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Choisir une image</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" class="form-control" id="nom" placeholder="Entrer le nom de l'article">
+            </div>
+            <div class="form-group">
+              <label for="prix">Prix</label>
+              <input type="text" class="form-control" id="prix" placeholder="Entrer le prix">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Entrer la description">
+              </div>
+            <button type="submit" class="btn btn-primary">Editer</button>
+          </form>
+    </center>
+
+</body>
+</html>

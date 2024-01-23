@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 20px; /* Ajustez cette valeur pour définir l'espacement entre les icônes */
+        }
+
+        .paragraphe {
+            text-align: left; /* Alignez le paragraphe à gauche */
+            margin: 20px; /* Ajoutez un espacement au paragraphe si nécessaire */
+        }
+
+        
+        input[type="text"]{
+            height: 40px;
+            border-radius: 10px;
+            background-color: #EBEDFF;
+            width: 300px;
+        }
+        input[type="email"]{
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #EBEDFF;
+        }
+        input[type="password"]{
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #EBEDFF;
+        }
+        input[type="submit"]{
+            width: 300px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: #251455;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#">
+                <h1>Logo</h1></a>
+            </li>
+            <li><a href="/connexionvendeur">
+                <h3>Se connecter</h3>
+            </a></li>
+        </ul>
+    </header>
+    <p class="paragraphe">
+        <h3>Créer un compte</h3>
+        <h3><a href="/inscription">Créer un compte pour client</a></h3>
+    </p>
+    <center>
+    <form action="">
+        <input type="text" id="nom" name="nom" placeholder="Entrez vôtre nom"><br><br>
+        <input type="text" id="prenom" name="prenom" placeholder="Entrez vôtre prénom"><br><br>
+        <input type="email" id="email" name="email" placeholder="Entrez vôtre email"><br><br>
+        <input type="password" id="password" name="password" placeholder="Entrez vôtre mot de passe"><br><br>
+        <label for="societe">Lieu où se trouve la société</label><br>
+        <input type="text" id="societe" name="societe" placeholder="Entrez vôtre société"><br><br>
+        <a href="" style="margin:20px;">Si votre société n’est pas immaculée, saisissez votre pays de résidence.</a><br><br>
+        <input type="submit" value="s'inscrire">
+    </form>
+    </center>
+    </body>
+    </html>

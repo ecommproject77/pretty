@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <!-- Development version -->
+<!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
+
+<!-- Production version -->
+<!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        li:first-child {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            width: 95%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #000;
+            width: 95%;
+            border-radius: 3px;
+        }
+
+        .search-icon {
+            margin-left: auto;
+            margin-right: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        hr {
+            margin: 20px;
+        }
+
+        div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+        .bottom-text {
+            clear: both;
+            margin-top: 20px;
+            margin: 20px;
+        }
+        .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; /* Ajustez l'espacement entre les dropdowns */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    /* Ajoutez cette règle pour ajuster la position des icônes du carrousel */
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%;
+        margin-top: 100px;
+        transform: translateY(-50%);
+    }
+
+    /* Vous pouvez également ajuster la position horizontale si nécessaire */
+    .carousel-control-prev {
+        /* left: 5px; */
+        margin-top: 0px;
+        margin-right: 80px;
+    }
+
+    .carousel-control-next {
+        margin-top: 0px;
+        right: 25px;
+    }
+    .bottom-text {
+        clear: both; /* Assurez-vous que la div est effacée en dessous des autres éléments flottants */
+        margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+        margin: 20px;
+        }
+
+        /* .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            display: inline-block;
+            margin-right: 10px; /* Ajustez l'espacement entre les dropdowns */
+        /* } */ 
+
+        /* .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px;
+            z-index: 1;
+        } */
+        
+
+        /* Pour les écrans larges (plus de 800px) */
+    @media only screen and (min-width: 801px) {
+        .gallery {
+            flex: 0 0 calc(33.33% - 40px);
+        }
+    }
+
+        /* Pour tous les écrans, y compris les écrans moyens (601px - 800px) */
+    .gallery {
+        flex: 0 0 calc(33.33% - 20px);
+        margin: 5px;
+        box-sizing: border-box;
+    }
+    /* Pour les écrans moyens (601px - 800px) */
+    @media only screen and (min-width: 601px) and (max-width: 800px) {
+        .gallery {
+            flex: 0 0 calc(33.33% - 20px);
+        }
+    }
+
+    /* Pour les écrans moyens (481px - 600px) */
+    @media only screen and (min-width: 481px) and (max-width: 600px) {
+        .gallery {
+            flex: 0 0 calc(50% - 20px);
+        }
+    }
+
+    /* Pour les écrans petits (321px - 480px) */
+    @media only screen and (min-width: 321px) and (max-width: 480px) {
+        .gallery {
+            flex: 0 0 calc(50% - 10px);
+        }
+    }
+
+    /* Pour les écrans très petits (jusqu'à 320px) */
+    @media only screen and (max-width: 320px) {
+        .gallery {
+            flex: 0 0 calc(100% - 10px);
+        }
+    }
+
+    </style>
+    
+    <title>Accueil</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >
+                <h1>Logo</h1></a>
+            </li>
+            <li><a href="/connexion">
+                <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="/panier">
+                <iconify-icon icon="lets-icons:basket-alt-3" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+            <li><a href="#">
+                <iconify-icon icon="pajamas:hamburger" style="color: black;" width="50" height="30"></iconify-icon>
+            </a></li>
+        </ul>
+    </header>
+    <menu>
+        <form action="/rechercher" method="get">
+            <input type="text" name="q" id="barreRecherche" placeholder="Rechercher...">
+            <iconify-icon icon="fluent:sidebar-search-rtl-20-regular" style="color: white; background-color: blue;" width="30" height="30"></iconify-icon>
+        </form>
+    </menu>
+
+        <h3>Vêtements et accessoires pour homme</h3>
+        <h4>Explorer par Catégorie</h4>
+        <hr>
+        <section>
+            <div class="card_gallery">
+                <div class="gallery">
+                    <a target="_blank" href="1.jpg">
+                        <img src="images/1.jpg" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc">Acheter</div>
+                </div>
+                <div class="card_gallery">
+                    <div class="gallery">
+                        <a target="_blank" href="1.jpg">
+                            <img src="images/1.jpg" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Acheter</div>
+                    </div>
+                    <div class="card_gallery">
+                        <div class="gallery">
+                            <a target="_blank" href="1.jpg">
+                                <img src="images/1.jpg" alt="Cinque Terre" width="600" height="400">
+                            </a>
+                            <div class="desc">Acheter</div>
+                        </div>
+                        <div class="bottom-text">
+                            <!--  -->
+                        </div>
+        </section>
+        <hr>
+        
+        <section>
+            <!-- Modifiez votre code HTML pour utiliser le carrousel -->
+            <div id="dropdownCarousel" class="carousel slide" data-ride="carousel" >
+                <div class="carousel-inner" >
+        
+                    <!-- Groupe 1 -->
+                    <div class="carousel-item active">
+                        <div class="dropdown">
+                            <button>Taille</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="sizeS" value="S"> S</label><br>
+                                <label><input type="checkbox" name="sizeM" value="M"> M</label><br>
+                                <label><input type="checkbox" name="sizeL" value="L"> L</label><br>
+                                <label><input type="checkbox" name="sizeXL" value="XL"> XL</label><br>
+                            </div>
+                        </div>
+        
+                        <div class="dropdown">
+                            <button>Couleur</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="colorNoir" value="Noir"> Noir</label><br>
+                                <label><input type="checkbox" name="colorBlanc" value="Blanc"> Blanc</label><br>
+                                <label><input type="checkbox" name="colorBleu" value="Bleu"> Bleu</label><br>
+                                <label><input type="checkbox" name="colorVert" value="Vert"> Vert</label><br>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button>Taille</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="sizeS" value="S"> S</label><br>
+                                <label><input type="checkbox" name="sizeM" value="M"> M</label><br>
+                                <label><input type="checkbox" name="sizeL" value="L"> L</label><br>
+                                <label><input type="checkbox" name="sizeXL" value="XL"> XL</label><br>
+                            </div>
+                        </div>
+        
+                        <!-- Ajoutez d'autres éléments de dropdown ici -->
+                        <!-- Exemple : Ajouter un filtre "Marque" -->
+                        <div class="dropdown">
+                            <button>Marque</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="brandNike" value="Nike"> Nike</label><br>
+                                <label><input type="checkbox" name="brandAdidas" value="Adidas"> Adidas</label><br>
+                                <!-- Ajoutez d'autres options de marque ici -->
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Groupe 2 -->
+                    <div class="carousel-item">
+                        <div class="dropdown">
+                            <button>Taille</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="sizeS" value="S"> S</label><br>
+                                <label><input type="checkbox" name="sizeM" value="M"> M</label><br>
+                                <label><input type="checkbox" name="sizeL" value="L"> L</label><br>
+                                <label><input type="checkbox" name="sizeXL" value="XL"> XL</label><br>
+                            </div>
+                        </div>
+        
+                        <div class="dropdown">
+                            <button>Couleur</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="colorNoir" value="Noir"> Noir</label><br>
+                                <label><input type="checkbox" name="colorBlanc" value="Blanc"> Blanc</label><br>
+                                <label><input type="checkbox" name="colorBleu" value="Bleu"> Bleu</label><br>
+                                <label><input type="checkbox" name="colorVert" value="Vert"> Vert</label><br>
+                            </div>
+                        </div>
+        
+                        <!-- Ajoutez d'autres éléments de dropdown ici -->
+                        <!-- Exemple : Ajouter un filtre "Marque" -->
+                        <div class="dropdown">
+                            <button>Marque</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="brandNike" value="Nike"> Nike</label><br>
+                                <label><input type="checkbox" name="brandAdidas" value="Adidas"> Adidas</label><br>
+                                <!-- Ajoutez d'autres options de marque ici -->
+                            </div>
+                        </div>
+
+                    </div>
+        
+                    <!-- Ajoutez d'autres groupes ici -->
+        
+                </div>
+        
+                <a class="carousel-control-prev" href="#dropdownCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #000;"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#dropdownCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #000;"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </section>
+        
+
+        <!-- Ajoutez ces lignes après l'inclusion des scripts Bootstrap et avant la fermeture de la balise </body> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-pzjw8W+ua/cF4PaXqOXlLlD8M2auU8eU+0z6Es2jGF2bcHtAiEJOz5qRGv8ciK9D" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+
+        <!-- <script>
+            $(document).ready(function(){
+                $('.carousel').carousel({
+                    interval: false // Désactive le défilement automatique
+                });
+            });
+        </script> -->
+
+        <script>
+            window.addEventListener('load', function () {
+                $('.carousel').carousel({
+                    interval: false // Désactive le défilement automatique
+                });
+            });
+        </script>
+        
+    <!-- </menu> -->
+
+    <footer>
+        <hr>
+        <div class="bottom-text">
+            <p>&copy; 2023 Votre site. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
