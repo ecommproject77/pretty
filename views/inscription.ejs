@@ -89,7 +89,7 @@
             <li><a href="#">
                 <h1>Logo</h1></a>
             </li>
-            <li><a href="/connexion">
+            <li><a href="/connexionmail">
                 <h3>Se connecter</h3>
             </a></li>
         </ul>
@@ -100,12 +100,12 @@
         <h3><a href="/inscriptionvendeur">Créer un compte pour vendeur</a></h3>
     </p>
     <p>Continuer avec:</p>
-    <form action="">
+    <form action="/inscription" method="POST">
     <section class="gallery-container">
         
         <div class="gallery">
             <div class="gallery-icon">
-                <iconify-icon icon="devicon:google" width="40" height="40"></iconify-icon>
+                <a href="/auth/google"><iconify-icon icon="devicon:google" width="40" height="40"></iconify-icon></a>
             </div>
         </div>
 
@@ -134,7 +134,7 @@
     
     <input type="email" id="email" name="email" placeholder="Entrez vôtre email"><br><br>
     <input type="password" id="password" name="password" placeholder="Entrez vôtre mot de passe"><br><br> 
-    <input type="submit" value="s'inscrire">
+    <input type="submit" name="submit" value="s'inscrire">
         
 </form>
 </body>

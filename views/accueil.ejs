@@ -225,7 +225,11 @@
             <li><a href="#" >
                 <h1>Logo</h1></a>
             </li>
-            <li><a href="/connexion">
+            <% if (email) { %>
+                <p>Connecté en tant que : <%= email %></p>
+                <a href="/logout">logout</a>
+            <% } %>
+            <li><a href="/connexionmail">
                 <iconify-icon icon="mingcute:user-4-fill" style="color: black;" width="50" height="30"></iconify-icon>
             </a></li>
             <li><a href="/panier">

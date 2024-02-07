@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com"> -->
+
+    <style>
+        body {
+            text-align: right;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #802AB6;
+        }
+        .text{
+            margin:10px; 
+            text-align: left;
+        }
+        input[type="password"]{
+            width: 99%;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #EBEDFF;
+        }
+        
+        input[type="submit"]{
+            width: 99%;
+            height: 50px;
+            border-radius: 30px;
+            background-color: #553CEE;
+        }
+        .text-lien{
+            text-align: center;
+            margin: 20px;
+        }
+        .trait{
+            margin: 20px;
+        }
+        
+    </style>
+    <title>Votre Titre</title>
+</head>
+<body>
+    <a href="">Donnez votre avis</a>
+    <div>
+        <h2 style="text-align: center;">Logo</h2>
+    </div>
+    <div class="text">
+        <h3 >Bienvenue <br> <%= email %> </h3>
+      <p> Ce n'est pas vous?  <a href="/connexionmail">Changer de compte </a></p>
+    </div>
+    <div>
+        <form action="/connexionpass" method="POST">
+            <input type="hidden" name="email" value="<%= email %>">
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe"><br><br>
+            <input type="submit" value="Se connecter">
+       
+</form> 
+<div class="text-lien">
+    <a href="#">Vous avez besoin d'aide pour vous connecter </a>
+</div>
+   <div class="trait">
+    <hr>
+   </div>
+</body>
+</html>
